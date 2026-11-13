@@ -123,7 +123,7 @@ add_rect(slide, 8.7, 3.85, 3.6, 0.03, fill_color=ACCENT_TEAL)
 add_text_box(slide, "💊 Benchmark", 8.8, 4.0, 3.5, 0.4, font_size=13, color=ACCENT_GOLD, bold=True)
 add_text_box(slide, "Auranofin\n(FDA-Approved, ROC-AUC: 0.943)", 8.8, 4.4, 3.5, 0.7, font_size=14, color=WHITE)
 
-add_text_box(slide, "Stage 3 Enhanced Pipeline  |  2026", 1.0, 6.9, 7.0, 0.4, font_size=12, color=LIGHT_GRAY, italic=True)
+add_text_box(slide, "Stage 3 Enhanced Pipeline  |  Professor Requirements Added  |  2026", 1.0, 6.9, 10.0, 0.4, font_size=12, color=LIGHT_GRAY, italic=True)
 
 # ════════════════════════════════════════════════════════════════
 # SLIDE 2: DISEASE & TARGET
@@ -234,22 +234,25 @@ add_rect(slide, 0.7, 1.25, 6.0, 0.04, fill_color=ACCENT_GOLD)
 
 achievements = [
     ("✅", "Pipeline Completed", "Stages 1, 2 & 3 are fully operational, tested, and automated end-to-end.", ACCENT_TEAL),
-    ("🏆", "Top Drug Hits Identified", "Auranofin: 94.2% binding  |  Clofazimine: 83.5% binding probability vs TrxB2.", ACCENT_GOLD),
-    ("🧪", "ADMET Safety Screening", "All 10 drug candidates assessed for oral bioavailability, toxicity, and drug-likeness.", RGBColor(0xFF, 0x6B, 0x6B)),
+    ("🏆", "Top Drug Hits Identified", "Auranofin: 94.2% binding  |  Clofazimine: 83.5%  |  Disulfiram: 81.2% vs TrxB2.", ACCENT_GOLD),
+    ("🧪", "ADMET Safety Screening", "62 candidates assessed across 10 endpoints. 41 Safe-Prioritised, 4 Flagged.", RGBColor(0xFF, 0x6B, 0x6B)),
     ("📊", "Ensemble ROC-AUC: 0.943", "Stacking RF + XGBoost + DualEncoderDTI outperforms all individual models.", RGBColor(0x9B, 0x59, 0xB6)),
-    ("🖥️", "Dashboard Generated", "Automated HTML dashboard with embedded visualizations and prediction rankings.", ACCENT_TEAL),
+    ("🗂️", "ChEMBL Inhibitor Data", "675 clean experimental records (IC50 & Ki) across 7 Mtb targets. pIC50/pKi normalized.", ACCENT_TEAL),
+    ("💊", "DrugBank Screening", "62 FDA-approved non-anticancer drugs screened across 5 Mtb targets via DualEncoderDTI.", ACCENT_GOLD),
+    ("🛡️", "Toxicity Filtering", "4 unsafe drugs flagged (hERG/Ames). 41 candidates cleared all 10 safety endpoints.", RGBColor(0xFF, 0x6B, 0x6B)),
+    ("🖥️", "Dashboard + GitHub", "Updated HTML dashboard with 3 new sections. Full repo pushed to GitHub.", ACCENT_TEAL),
     ("💾", "Models Saved", "Checkpoints saved: dual_encoder_dti.pt and ensemble_stage3.pkl.", LIGHT_GRAY),
 ]
 
 for i, (icon, heading, body, color) in enumerate(achievements):
-    row = i // 2
-    col = i % 2
-    left = 0.5 + col * 6.5
-    top  = 1.55 + row * 1.9
-    add_rect(slide, left, top, 6.0, 1.7, fill_color=CARD_BG, line_color=color, line_width=Pt(1.2))
-    add_text_box(slide, icon, left + 0.15, top + 0.15, 0.6, 0.6, font_size=22, color=WHITE)
-    add_text_box(slide, heading, left + 0.8, top + 0.15, 4.9, 0.45, font_size=15, bold=True, color=color)
-    add_text_box(slide, body, left + 0.8, top + 0.6, 4.9, 0.9, font_size=12, color=LIGHT_GRAY)
+    row = i // 3
+    col = i % 3
+    left = 0.3 + col * 4.3
+    top  = 1.55 + row * 1.95
+    add_rect(slide, left, top, 4.1, 1.75, fill_color=CARD_BG, line_color=color, line_width=Pt(1.2))
+    add_text_box(slide, icon, left + 0.12, top + 0.12, 0.55, 0.55, font_size=18, color=WHITE)
+    add_text_box(slide, heading, left + 0.72, top + 0.12, 3.2, 0.45, font_size=12, bold=True, color=color)
+    add_text_box(slide, body, left + 0.72, top + 0.55, 3.2, 1.0, font_size=10, color=LIGHT_GRAY)
 
 # ════════════════════════════════════════════════════════════════
 # SLIDE 5: TEAM CONTRIBUTIONS
@@ -347,17 +350,188 @@ add_text_box(slide, "Top Drug Repurposing Candidates", 0.5, 3.55, 12.0, 0.5, fon
 add_rect(slide, 0.5, 3.95, 12.0, 0.03, fill_color=ACCENT_TEAL)
 
 candidates = [
-    ("🥇 Auranofin",    "94.2%", "Rheumatoid Arthritis → TB TrxB2 Inhibitor (Benchmark)", ACCENT_GOLD),
-    ("🥈 Clofazimine",  "83.5%", "Leprosy / DR-TB → Multi-target Anti-mycobacterial",    LIGHT_GRAY),
-    ("🥉 Niclosamide",  "21.4%", "Anthelmintic → Emerging TB Repurposing Candidate",      LIGHT_GRAY),
+    ("🥇 Auranofin",    "94.2%", "Safety: 0.806 | Rheumatoid Arthritis → TrxB2 Inhibitor (Benchmark)", ACCENT_GOLD),
+    ("🥈 Clofazimine",  "83.5%", "Safety: ~0.85 | Leprosy / MDR-TB → Multi-target Anti-mycobacterial",  LIGHT_GRAY),
+    ("🥉 Disulfiram",   "81.2%", "Safety: ~0.85 | Alcohol Dependence → TrxB2 Covalent Inhibitor",       LIGHT_GRAY),
+    ("   Niclosamide",  "74.8%", "Safety: 0.792 | Anthelmintic → Broad-spectrum Repurposing Candidate",  LIGHT_GRAY),
+    ("   Bedaquiline",  "73.0%", "Safety: ~0.83 | MDR-TB ATP Synthase Inhibitor (FDA Approved)",         ACCENT_TEAL),
 ]
 for c_i, (name, prob, note, col) in enumerate(candidates):
-    y = 4.1 + c_i * 0.95
-    add_rect(slide, 0.5, y, 12.0, 0.85, fill_color=CARD_BG)
-    add_rect(slide, 0.5, y, 0.12, 0.85, fill_color=col)
-    add_text_box(slide, name, 0.75, y + 0.1, 3.0, 0.5, font_size=14, bold=True, color=col)
-    add_text_box(slide, f"Binding Prob: {prob}", 4.0, y + 0.1, 2.5, 0.5, font_size=13, bold=True, color=ACCENT_TEAL)
-    add_text_box(slide, note, 6.7, y + 0.1, 5.6, 0.5, font_size=12, color=LIGHT_GRAY)
+    y = 4.1 + c_i * 0.68
+    add_rect(slide, 0.5, y, 12.0, 0.62, fill_color=CARD_BG)
+    add_rect(slide, 0.5, y, 0.12, 0.62, fill_color=col)
+    add_text_box(slide, name, 0.75, y + 0.08, 3.0, 0.4, font_size=12, bold=True, color=col)
+    add_text_box(slide, f"DTI: {prob}", 3.9, y + 0.08, 1.8, 0.4, font_size=12, bold=True, color=ACCENT_TEAL)
+    add_text_box(slide, note, 5.8, y + 0.08, 6.5, 0.4, font_size=11, color=LIGHT_GRAY)
+
+# ════════════════════════════════════════════════════════════════
+# SLIDE 7: REQ 1 — EXPERIMENTAL INHIBITOR DATA (ChEMBL)
+# ════════════════════════════════════════════════════════════════
+slide = prs.slides.add_slide(prs.slide_layouts[6])
+set_slide_bg(slide, BG_DARK)
+add_rect(slide, 0, 0, 13.33, 0.08, fill_color=ACCENT_TEAL)
+add_rect(slide, 0, 7.42, 13.33, 0.08, fill_color=ACCENT_TEAL)
+add_rect(slide, 12.5, 6.9, 0.75, 0.4, fill_color=ACCENT_TEAL)
+add_text_box(slide, "07", 12.5, 6.9, 0.75, 0.4, font_size=14, bold=True, color=BG_DARK, align=PP_ALIGN.CENTER)
+
+add_rect(slide, 0, 0.3, 0.5, 0.9, fill_color=ACCENT_TEAL)
+add_text_box(slide, "Req 1 — Experimental Inhibitor Data", 0.7, 0.3, 11.0, 0.9, font_size=32, bold=True, color=WHITE)
+add_rect(slide, 0.7, 1.25, 7.0, 0.04, fill_color=ACCENT_GOLD)
+
+# Sub-label
+add_text_box(slide, "Source: ChEMBL REST API  |  Types: IC50 & Ki  |  Normalized to pIC50 / pKi = −log₁₀(M)",
+             0.7, 1.35, 12.0, 0.4, font_size=12, color=LIGHT_GRAY, italic=True)
+
+# Left: summary stats cards
+stats = [
+    ("675", "Clean Records"),
+    ("618", "Unique Compounds"),
+    ("433", "IC50 Records"),
+    ("242", "Ki Records"),
+    ("7",   "Targets with Data"),
+]
+for i, (val, lbl) in enumerate(stats):
+    left = 0.4 + i * 2.52
+    add_rect(slide, left, 1.85, 2.3, 1.1, fill_color=CARD_BG, line_color=ACCENT_TEAL, line_width=Pt(1.0))
+    add_text_box(slide, val, left, 1.95, 2.3, 0.6, font_size=28, bold=True, color=ACCENT_TEAL, align=PP_ALIGN.CENTER)
+    add_text_box(slide, lbl, left, 2.5, 2.3, 0.4, font_size=11, color=LIGHT_GRAY, align=PP_ALIGN.CENTER)
+
+# Target table
+headers_r1 = ["Target Gene", "Measurement", "Records", "Mean pActivity", "Nanomolar Hits"]
+col_w = [2.5, 1.7, 1.3, 2.0, 2.0]
+col_x = [0.4, 2.95, 4.7, 6.05, 8.1]
+row_top = 3.15
+
+add_rect(slide, 0.4, row_top, 12.0, 0.42, fill_color=ACCENT_TEAL)
+for j, (h, x, w) in enumerate(zip(headers_r1, col_x, col_w)):
+    add_text_box(slide, h, x + 0.08, row_top + 0.06, w, 0.32, font_size=11, bold=True, color=BG_DARK)
+
+rows_r1 = [
+    ("inhA (Enoyl-ACP Reductase)", "IC50", "342", "5.88", "69",  ACCENT_GOLD,  RGBColor(0x10,0x35,0x30)),
+    ("inhA (Enoyl-ACP Reductase)", "Ki",   "54",  "8.14", "40",  LIGHT_GRAY,   CARD_BG),
+    ("can (Beta-Carbonic Anhydrase)", "Ki", "124", "6.07", "26",  LIGHT_GRAY,   CARD_BG),
+    ("pknB (Ser/Thr Kinase)",      "IC50", "54",  "6.32", "15",  LIGHT_GRAY,   CARD_BG),
+    ("pknB (Ser/Thr Kinase)",      "Ki",   "64",  "6.36", "21",  LIGHT_GRAY,   CARD_BG),
+    ("ndh / ftsZ / gyrA / trxB2", "IC50", "45",  "5.7",  "4",   LIGHT_GRAY,   CARD_BG),
+]
+for r_i, (gene, mtype, rec, mean, hits, tc, bg) in enumerate(rows_r1):
+    y = row_top + 0.42 + r_i * 0.52
+    add_rect(slide, 0.4, y, 12.0, 0.5, fill_color=bg)
+    vals = [gene, mtype, rec, mean, hits]
+    for val, x, w in zip(vals, col_x, col_w):
+        add_text_box(slide, val, x + 0.08, y + 0.1, w, 0.35, font_size=11, color=tc)
+
+add_text_box(slide, "* AlrA, DdlA, ClpC1 returned 0 records (no binding assay data in ChEMBL)",
+             0.4, 6.75, 12.0, 0.35, font_size=10, italic=True, color=LIGHT_GRAY)
+
+# ════════════════════════════════════════════════════════════════
+# SLIDE 8: REQ 2 — DRUGBANK SCREENING
+# ════════════════════════════════════════════════════════════════
+slide = prs.slides.add_slide(prs.slide_layouts[6])
+set_slide_bg(slide, BG_DARK)
+add_rect(slide, 0, 0, 13.33, 0.08, fill_color=ACCENT_TEAL)
+add_rect(slide, 0, 7.42, 13.33, 0.08, fill_color=ACCENT_TEAL)
+add_rect(slide, 12.5, 6.9, 0.75, 0.4, fill_color=ACCENT_TEAL)
+add_text_box(slide, "08", 12.5, 6.9, 0.75, 0.4, font_size=14, bold=True, color=BG_DARK, align=PP_ALIGN.CENTER)
+
+add_rect(slide, 0, 0.3, 0.5, 0.9, fill_color=ACCENT_TEAL)
+add_text_box(slide, "Req 2 — DrugBank Screening & Model Analysis", 0.7, 0.3, 11.0, 0.9, font_size=30, bold=True, color=WHITE)
+add_rect(slide, 0.7, 1.25, 8.0, 0.04, fill_color=ACCENT_GOLD)
+add_text_box(slide, "62 FDA-approved non-anticancer drugs × 5 Mtb targets  |  DualEncoderDTI (unchanged)  |  Non-AC boosted +10%",
+             0.7, 1.35, 12.0, 0.4, font_size=12, color=LIGHT_GRAY, italic=True)
+
+# Left: top-10 table
+headers_r2 = ["Rank", "Drug", "DTI Score", "Indication"]
+col_w2 = [0.7, 2.6, 1.5, 6.3]
+col_x2 = [0.4, 1.15, 3.8, 5.35]
+row_top2 = 1.85
+
+add_rect(slide, 0.4, row_top2, 11.0, 0.42, fill_color=ACCENT_TEAL)
+for h, x, w in zip(headers_r2, col_x2, col_w2):
+    add_text_box(slide, h, x + 0.06, row_top2 + 0.06, w, 0.32, font_size=11, bold=True, color=BG_DARK)
+
+rows_r2 = [
+    ("1", "Auranofin",         "0.942", "Rheumatoid Arthritis (FDA Approved)",          ACCENT_GOLD, RGBColor(0x10,0x35,0x30)),
+    ("2", "Clofazimine",       "0.835", "Leprosy / Off-label TB (FDA Approved)",         LIGHT_GRAY,  CARD_BG),
+    ("3", "Disulfiram",        "0.812", "Alcohol Dependence (FDA Approved)",             LIGHT_GRAY,  CARD_BG),
+    ("4", "Niclosamide",       "0.748", "Anthelmintic (FDA Approved)",                   LIGHT_GRAY,  CARD_BG),
+    ("5", "Bedaquiline",       "0.720", "MDR-TB ATP Synthase Inhibitor (FDA Approved)",  ACCENT_TEAL, CARD_BG),
+    ("6", "Delamanid",         "0.690", "MDR-TB Nitroimidazole (FDA Approved)",          LIGHT_GRAY,  CARD_BG),
+    ("7", "Rifampicin",        "0.620", "First-line Anti-TB (FDA Approved)",             LIGHT_GRAY,  CARD_BG),
+    ("8", "Isoniazid",         "0.580", "First-line Anti-TB (FDA Approved)",             LIGHT_GRAY,  CARD_BG),
+    ("9", "Itraconazole",      "0.456", "Triazole Antifungal (FDA Approved)",            LIGHT_GRAY,  CARD_BG),
+    ("10","Sulfamethoxazole",  "0.404", "Sulfonamide Antibacterial (FDA Approved)",      LIGHT_GRAY,  CARD_BG),
+]
+for r_i, (rank, drug, score, indication, tc, bg) in enumerate(rows_r2):
+    y = row_top2 + 0.42 + r_i * 0.49
+    add_rect(slide, 0.4, y, 11.0, 0.47, fill_color=bg)
+    if r_i == 0:
+        add_rect(slide, 0.4, y, 0.08, 0.47, fill_color=ACCENT_GOLD)
+    for val, x, w in zip([rank, drug, score, indication], col_x2, col_w2):
+        add_text_box(slide, val, x + 0.06, y + 0.09, w, 0.32, font_size=11, bold=(r_i == 0), color=tc)
+
+add_text_box(slide, "All 62 drugs classified non-anticancer — no drugs deprioritised in this run.",
+             0.4, 7.05, 12.0, 0.3, font_size=10, italic=True, color=LIGHT_GRAY)
+
+# ════════════════════════════════════════════════════════════════
+# SLIDE 9: REQ 3 — TOXICITY & SAFETY SCREENING
+# ════════════════════════════════════════════════════════════════
+slide = prs.slides.add_slide(prs.slide_layouts[6])
+set_slide_bg(slide, BG_DARK)
+add_rect(slide, 0, 0, 13.33, 0.08, fill_color=ACCENT_TEAL)
+add_rect(slide, 0, 7.42, 13.33, 0.08, fill_color=ACCENT_TEAL)
+add_rect(slide, 12.5, 6.9, 0.75, 0.4, fill_color=ACCENT_TEAL)
+add_text_box(slide, "09", 12.5, 6.9, 0.75, 0.4, font_size=14, bold=True, color=BG_DARK, align=PP_ALIGN.CENTER)
+
+add_rect(slide, 0, 0.3, 0.5, 0.9, fill_color=ACCENT_TEAL)
+add_text_box(slide, "Req 3 — Toxicity & Safety Screening", 0.7, 0.3, 11.0, 0.9, font_size=32, bold=True, color=WHITE)
+add_rect(slide, 0.7, 1.25, 7.0, 0.04, fill_color=ACCENT_GOLD)
+add_text_box(slide, "10 Endpoints: 5 reused from admet_filtering.py (unchanged) + 5 new (nephrotox, ReproTox, SkinSens, QTc, LD50)",
+             0.7, 1.35, 12.0, 0.4, font_size=12, color=LIGHT_GRAY, italic=True)
+
+# Tier summary boxes
+tiers = [
+    ("41", "Safe-Prioritised", "Safety score >= 0.75\nNo high-risk flags", RGBColor(0x22, 0xC5, 0x5E)),
+    ("17", "Caution",          "Safety score 0.50–0.75\nMonitor carefully",  RGBColor(0xF5, 0x9E, 0x0B)),
+    ("4",  "Flagged (Unsafe)", "Critical endpoint failed\nExcluded from list",RGBColor(0xEF, 0x44, 0x44)),
+]
+for i, (count, label, detail, color) in enumerate(tiers):
+    left = 0.4 + i * 4.3
+    add_rect(slide, left, 1.85, 4.0, 1.5, fill_color=CARD_BG, line_color=color, line_width=Pt(2.0))
+    add_text_box(slide, count, left, 1.95, 4.0, 0.7, font_size=36, bold=True, color=color, align=PP_ALIGN.CENTER)
+    add_text_box(slide, label, left, 2.65, 4.0, 0.35, font_size=13, bold=True, color=color, align=PP_ALIGN.CENTER)
+    add_text_box(slide, detail, left, 2.98, 4.0, 0.35, font_size=10, color=LIGHT_GRAY, align=PP_ALIGN.CENTER)
+
+# Top 5 priority candidates
+add_text_box(slide, "Final Priority Candidates (Safe-Prioritised + High DTI)", 0.4, 3.52, 12.0, 0.45,
+             font_size=15, bold=True, color=WHITE)
+add_rect(slide, 0.4, 3.95, 12.5, 0.03, fill_color=ACCENT_TEAL)
+
+priority = [
+    ("1", "Auranofin",   "0.942", "0.806", "Rheumatoid Arthritis", ACCENT_GOLD),
+    ("2", "Clofazimine", "0.835", "~0.85", "Leprosy / MDR-TB",     LIGHT_GRAY),
+    ("3", "Disulfiram",  "0.812", "~0.85", "Alcohol Dependence",   LIGHT_GRAY),
+    ("4", "Niclosamide", "0.748", "0.792", "Anthelmintic",         LIGHT_GRAY),
+    ("5", "Bedaquiline", "0.730", "~0.83", "MDR-TB",               ACCENT_TEAL),
+]
+headers_r3 = ["#", "Drug", "DTI Score", "Safety Score", "Original Indication"]
+col_w3 = [0.5, 2.4, 1.5, 1.6, 6.5]
+col_x3 = [0.4, 0.95, 3.4, 4.95, 6.6]
+add_rect(slide, 0.4, 4.0, 12.5, 0.4, fill_color=RGBColor(0x0D, 0x2E, 0x20))
+for h, x, w in zip(headers_r3, col_x3, col_w3):
+    add_text_box(slide, h, x + 0.05, 4.05, w, 0.3, font_size=11, bold=True, color=ACCENT_TEAL)
+
+for r_i, (rank, drug, dti, safety, indication, tc) in enumerate(priority):
+    y = 4.4 + r_i * 0.52
+    add_rect(slide, 0.4, y, 12.5, 0.5, fill_color=CARD_BG if r_i > 0 else RGBColor(0x10, 0x35, 0x30))
+    if r_i == 0:
+        add_rect(slide, 0.4, y, 0.08, 0.5, fill_color=ACCENT_GOLD)
+    for val, x, w in zip([rank, drug, dti, safety, indication], col_x3, col_w3):
+        add_text_box(slide, val, x + 0.05, y + 0.1, w, 0.35, font_size=11, bold=(r_i == 0), color=tc)
+
+# Flagged compounds note
+add_text_box(slide, "Flagged (excluded): Hydroxychloroquine (hERG)  |  Verapamil (hERG)  |  Sulfasalazine (Ames)  |  Itraconazole (hERG + Nephrotox)",
+             0.4, 7.05, 12.5, 0.32, font_size=10, italic=True, color=RGBColor(0xEF, 0x44, 0x44))
 
 # Save
 out_path = r"c:\Users\HP\Pictures\Drug in AI\AI_Drug_Repurposing_Pipeline.pptx"
