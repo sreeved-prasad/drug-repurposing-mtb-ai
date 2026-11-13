@@ -1,0 +1,11 @@
+Rank,Drug Name,Target Protein,Organism,Predicted Probability,Original Indication,SMILES
+1,Auranofin,TrxB2 (P9WHH1),Mycobacterium tuberculosis,0.942,Rheumatoid Arthritis (FDA Approved),CC(=O)OCC1C(C(C(C(O1)S[Au]P(CC)(CC)CC)OC(=O)C)OC(=O)C)OC(=O)C
+2,Clofazimine,TrxB2 (P9WHH1),Mycobacterium tuberculosis,0.835,Leprosy / Off-label TB (FDA Approved),CC(C)NC1=NC2=CC=CC=C2N(C3=CC=C(C=C3)Cl)C1=NC4=CC=C(C=C4)Cl
+3,Niclosamide,TrxB2 (P9WHH1),Mycobacterium tuberculosis,0.2142,Anthelmintic (FDA Approved),C1=CC(=C(C=C1Cl)NC(=O)C2=C(C=CC(=C2)[N+](=O)[O-])O)Cl
+4,Metformin,TrxB2 (P9WHH1),Mycobacterium tuberculosis,0.1135,Type 2 Diabetes (FDA Approved),CN(C)C(=N)NC(=N)N
+5,Disulfiram,TrxB2 (P9WHH1),Mycobacterium tuberculosis,0.0282,Alcohol Dependence (FDA Approved),CCN(CC)C(=S)SSC(=S)N(CC)CC
+6,Aspirin,TrxB2 (P9WHH1),Mycobacterium tuberculosis,0.0238,Anti-inflammatory / NSAID (FDA Approved),CC(=O)OC1=CC=CC=C1C(=O)O
+7,Chloroquine,TrxB2 (P9WHH1),Mycobacterium tuberculosis,0.0178,Malaria / Amoebiasis (FDA Approved),CCN(CC)CCCC(C)NC1=C2C=CC(Cl)=CC2=NC=C1
+8,Atorvastatin,TrxB2 (P9WHH1),Mycobacterium tuberculosis,0.0161,Dyslipidemia (FDA Approved),CC(C)C1=C(C(=C(N1CCC(CC(CC(=O)O)O)O)C2=CC=C(C=C2)F)C3=CC=CC=C3)C(=O)NC4=CC=CC=C4
+9,Ciprofloxacin,TrxB2 (P9WHH1),Mycobacterium tuberculosis,0.0105,Broad-spectrum Fluoroquinolone (FDA Approved),C1CC1N2C=C(C(=O)C3=CC(=C(C=C32)N4CCNCC4)F)C(=O)O
+10,Linezolid,TrxB2 (P9WHH1),Mycobacterium tuberculosis,0.0091,Gram-positive / DR-TB (FDA Approved),CC(=O)NCC1CN(C2=CC(=C(C=C2)N3CCOCC3)F)C(=O)O1

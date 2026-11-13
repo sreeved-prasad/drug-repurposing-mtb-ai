@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large model/data files
+*.pt
+*.pkl
+*.h5
+*.hdf5
+data/raw/
+data/processed/esm_protein_cache.pt
+
+# Results — keep CSVs and figures but skip large intermediates
+# (uncomment below to exclude all results)
+# results/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log

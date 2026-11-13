@@ -1,0 +1,63 @@
+Safety_Rank,Drug Name,Original Indication,Predicted_DTI_Prob,Extended_Safety_Score,Safety_Tier,Hepatotox_Risk,hERG_Risk,Ames_Risk,Nephrotox_Risk,ReproTox_Risk,QTc_Risk,Lipinski_Pass,PAINS_Free
+1,Memantine,NMDA Antagonist / Alzheimer's (FDA Approved),0.0221,0.92,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+2,Valproic Acid,Anticonvulsant / Mood Stabilizer (FDA Approved),0.0239,0.9189,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+3,Praziquantel,Anthelmintic / Schistosomiasis (FDA Approved),0.0174,0.9166,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+4,Fluconazole,Triazole Antifungal (FDA Approved),0.0092,0.9155,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+5,Ivermectin,Antiparasitic (FDA Approved),0.0188,0.9142,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+6,Aspirin,Anti-inflammatory / NSAID (FDA Approved),0.0238,0.9135,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+7,Colchicine,Gout / Anti-inflammatory (FDA Approved),0.0111,0.9129,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+8,Rifabutin,MAC Prophylaxis / MDR-TB (FDA Approved),0.0129,0.9119,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+9,Captopril,ACE Inhibitor / Hypertension (FDA Approved),0.0129,0.9019,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+10,Ethambutol,First-line Anti-TB (FDA Approved),0.0261,0.9018,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+11,Ethionamide,Second-line Anti-TB (FDA Approved),0.0237,0.9006,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Moderate,True,True
+12,Metronidazole,Antiprotozoal / Anaerobe (FDA Approved),0.0497,0.8983,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+13,Donepezil,AChE Inhibitor / Alzheimer's (FDA Approved),0.0106,0.8966,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Moderate,True,True
+14,Mycophenolate,Immunosuppressant / Transplant (FDA Approved),0.0121,0.8937,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+15,Voriconazole,Triazole Antifungal (FDA Approved),0.0107,0.8936,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+16,Ramipril,ACE Inhibitor (FDA Approved),0.0101,0.8931,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+17,Disulfiram,Alcohol Dependence (FDA Approved),0.812,0.8894,✅ Safe-Prioritised,Low,Low,Negative,Moderate,Low,Low,True,True
+18,Tinidazole,Antiprotozoal (FDA Approved),0.318,0.8874,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+19,Phenytoin,Anticonvulsant (FDA Approved),0.0183,0.887,✅ Safe-Prioritised,Low,Low,Negative,Moderate,Low,Low,True,True
+20,Isoniazid,First-line Anti-TB (FDA Approved),0.58,0.8838,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Moderate,True,True
+21,Moxifloxacin,Fluoroquinolone / MDR-TB (FDA Approved),0.02,0.8744,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Moderate,True,True
+22,Albendazole,Broad-spectrum Anthelmintic (FDA Approved),0.0116,0.8721,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Moderate,True,True
+23,Artesunate,Antimalarial Artemisinin (FDA Approved),0.0097,0.863,✅ Safe-Prioritised,Low,Low,Negative,Moderate,Low,Low,True,True
+24,Dexamethasone,Corticosteroid / Immunosuppressant (FDA Approved),0.0981,0.8509,✅ Safe-Prioritised,Moderate,Low,Negative,Low,Low,Low,True,True
+25,Simvastatin,HMG-CoA Reductase Inhibitor (FDA Approved),0.0845,0.8498,✅ Safe-Prioritised,Low,Moderate,Negative,Low,Low,Low,True,True
+26,Carbamazepine,Anticonvulsant / Neuropathic Pain (FDA Approved),0.0593,0.8456,✅ Safe-Prioritised,Low,Low,Negative,Moderate,Low,Moderate,True,True
+27,Nitrofurantoin,Urinary tract antibacterial (FDA Approved),0.1209,0.8423,✅ Safe-Prioritised,Low,Low,Negative,Moderate,Low,Low,True,True
+28,Pyrazinamide,First-line Anti-TB (FDA Approved),0.0676,0.8405,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+29,Cycloserine,Second-line Anti-TB (FDA Approved),0.0382,0.8405,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+30,Oxazolidinone,Oxazolidinone core scaffold (reference),0.024,0.8405,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+31,Amphotericin B,Polyene Antifungal (FDA Approved),0.0494,0.836,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+32,Delamanid,MDR-TB Nitroimidazole (FDA Approved),0.69,0.8299,✅ Safe-Prioritised,Moderate,Low,Negative,Low,Low,Moderate,True,True
+33,Ciprofloxacin,Broad-spectrum Fluoroquinolone (FDA Approved),0.0105,0.8297,✅ Safe-Prioritised,Low,Moderate,Negative,Low,Low,Moderate,True,True
+34,Chloroquine,Malaria / Amoebiasis (FDA Approved),0.0178,0.8245,⚠️  Caution,Low,Moderate,Negative,Low,Low,High,True,True
+35,Metformin,Type 2 Diabetes (FDA Approved),0.1135,0.821,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+36,Thalidomide,IMiD / Leprosy-related ENL (FDA Approved),0.0504,0.8148,⚠️  Caution,Low,Low,Negative,Low,Moderate,Low,True,False
+37,Auranofin,Rheumatoid Arthritis (FDA Approved),0.942,0.8065,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,True,True
+38,Nifedipine,Calcium Channel Blocker (FDA Approved),0.0159,0.8043,✅ Safe-Prioritised,Moderate,Low,Negative,Low,Low,Low,True,True
+39,Capreomycin,MDR-TB Peptide Antibiotic (FDA Approved),0.108,0.8005,✅ Safe-Prioritised,Low,Low,Negative,Moderate,Low,Low,True,True
+40,Trimethoprim,DHFR Inhibitor / Antibacterial (FDA Approved),0.0621,0.7977,⚠️  Caution,Low,Low,Positive (Alert),Low,Low,Low,True,True
+41,Hydroxychloroquine,Antimalarial / Autoimmune (FDA Approved),0.0128,0.7972,🚫 Flagged (Unsafe),Low,High,Negative,Low,Low,High,True,True
+42,Niclosamide,Anthelmintic (FDA Approved),0.748,0.7925,✅ Safe-Prioritised,Low,Low,Negative,Moderate,Low,Moderate,True,True
+43,Pretomanid,XDR-TB Nitroimidazole (FDA Approved),0.0176,0.7893,⚠️  Caution,Low,High,Negative,Low,Low,Moderate,True,True
+44,Metoprolol,Beta Blocker / Hypertension (FDA Approved),0.0109,0.7851,⚠️  Caution,Low,Low,Negative,Low,Low,Low,True,False
+45,Linezolid,Gram-positive / DR-TB (FDA Approved),0.0091,0.782,⚠️  Caution,Low,Moderate,Negative,Low,Low,Low,True,False
+46,Para-aminosalicylic acid,Second-line Anti-TB (FDA Approved),0.0973,0.78,⚠️  Caution,Low,Low,Positive (Alert),Low,Low,Low,True,True
+47,Sulfamethoxazole,Sulfonamide Antibacterial (FDA Approved),0.4038,0.7748,⚠️  Caution,Low,Low,Positive (Alert),Low,Low,Low,True,True
+48,Prednisone,Corticosteroid (FDA Approved),0.0367,0.7667,⚠️  Caution,Moderate,Low,Negative,Low,Low,Low,True,False
+49,Clofazimine,Leprosy / Off-label TB (FDA Approved),0.835,0.7645,⚠️  Caution,Low,Moderate,Negative,Low,Low,High,True,True
+50,Verapamil,Calcium Channel Blocker (FDA Approved),0.0111,0.7594,🚫 Flagged (Unsafe),Low,High,Negative,Low,Low,High,True,True
+51,Lenalidomide,IMiD / ENL Treatment (FDA Approved),0.0179,0.7546,⚠️  Caution,Low,Low,Positive (Alert),Low,Low,Moderate,True,True
+52,Cyclosporine,Calcineurin Inhibitor / Transplant (FDA Approved),0.0989,0.7456,✅ Safe-Prioritised,Low,Low,Negative,Low,Low,Low,False,True
+53,Sirolimus,mTOR Inhibitor / Transplant (FDA Approved),0.0541,0.7252,✅ Safe-Prioritised,Moderate,Low,Negative,Low,Low,Moderate,True,True
+54,Bedaquiline,MDR-TB ATP Synthase Inhibitor (FDA Approved),0.72,0.7185,⚠️  Caution,Low,Moderate,Negative,Low,Low,High,False,True
+55,Minocycline,Broad-spectrum Tetracycline (FDA Approved),0.0207,0.7098,✅ Safe-Prioritised,Moderate,Low,Negative,Low,Low,Low,True,True
+56,Amiodarone,Antiarrhythmic (FDA Approved),0.1157,0.6935,⚠️  Caution,Low,Moderate,Negative,Low,Low,High,False,True
+57,Amikacin,Aminoglycoside / MDR-TB (FDA Approved),0.0099,0.6905,⚠️  Caution,Low,Low,Negative,Moderate,Low,Low,False,True
+58,Atorvastatin,Dyslipidemia (FDA Approved),0.0161,0.6635,⚠️  Caution,Low,Moderate,Negative,Low,Low,High,False,True
+59,Rifampicin,First-line Anti-TB (FDA Approved),0.62,0.6624,⚠️  Caution,Moderate,Low,Negative,Low,Low,Moderate,True,False
+60,Doxycycline,Broad-spectrum Antibiotic (FDA Approved),0.0119,0.645,⚠️  Caution,Moderate,Low,Negative,Low,Low,Low,True,False
+61,Sulfasalazine,Inflammatory Bowel Disease / RA (FDA Approved),0.059,0.5988,🚫 Flagged (Unsafe),Low,Low,Positive (Alert),Low,Low,Moderate,True,False
+62,Itraconazole,Triazole Antifungal (FDA Approved),0.4562,0.5075,🚫 Flagged (Unsafe),Low,High,Negative,High,Low,High,False,False

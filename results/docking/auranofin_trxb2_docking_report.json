@@ -1,0 +1,89 @@
+{
+  "Drug Candidate": "Auranofin",
+  "Target Protein": "M. tuberculosis TrxB2 (P9WHH1)",
+  "PDB Structure": "2A87",
+  "Binding Affinity (kcal/mol)": -7.85,
+  "Active Redox Pocket Coordinates": {
+    "x": 4.88,
+    "y": 21.7,
+    "z": 36.65
+  },
+  "Complex PDB File": "2A87_auranofin_complex.pdb",
+  "Interactive HTML Viewer": "auranofin_trxb2_interactive_3d.html",
+  "PyMOL Script": "visualize_auranofin_2A87.pml",
+  "PLIP Interactions Count": 8,
+  "Interacting Residues": [
+    {
+      "Type": "Gold-Thiol Coordination",
+      "Protein_Residue": "CYS145",
+      "Chain": "A",
+      "Protein_Atom": "SG",
+      "Ligand_Atom": "Au13",
+      "Distance_A": 2.73,
+      "Description": "Catalytic Redox Au-S Coordinate Bond"
+    },
+    {
+      "Type": "Gold-Thiol Coordination",
+      "Protein_Residue": "CYS148",
+      "Chain": "A",
+      "Protein_Atom": "SG",
+      "Ligand_Atom": "Au13",
+      "Distance_A": 2.64,
+      "Description": "Catalytic Redox Au-S Coordinate Bond"
+    },
+    {
+      "Type": "Hydrogen Bond",
+      "Protein_Residue": "CYS145",
+      "Chain": "A",
+      "Protein_Atom": "N",
+      "Ligand_Atom": "O31",
+      "Distance_A": 2.84,
+      "Description": "Directional Polar Contact / H-Bond"
+    },
+    {
+      "Type": "Hydrophobic Contact",
+      "Protein_Residue": "CYS145",
+      "Chain": "A",
+      "Protein_Atom": "CB",
+      "Ligand_Atom": "C7",
+      "Distance_A": 3.74,
+      "Description": "Van der Waals / Alkyl Stacking"
+    },
+    {
+      "Type": "Hydrophobic Contact",
+      "Protein_Residue": "THR147",
+      "Chain": "A",
+      "Protein_Atom": "C",
+      "Ligand_Atom": "C16",
+      "Distance_A": 4.14,
+      "Description": "Van der Waals / Alkyl Stacking"
+    },
+    {
+      "Type": "Hydrophobic Contact",
+      "Protein_Residue": "THR147",
+      "Chain": "A",
+      "Protein_Atom": "CB",
+      "Ligand_Atom": "C17",
+      "Distance_A": 3.45,
+      "Description": "Van der Waals / Alkyl Stacking"
+    },
+    {
+      "Type": "Hydrophobic Contact",
+      "Protein_Residue": "THR147",
+      "Chain": "A",
+      "Protein_Atom": "CG2",
+      "Ligand_Atom": "C17",
+      "Distance_A": 3.82,
+      "Description": "Van der Waals / Alkyl Stacking"
+    },
+    {
+      "Type": "Hydrophobic Contact",
+      "Protein_Residue": "ALA146",
+      "Chain": "A",
+      "Protein_Atom": "C",
+      "Ligand_Atom": "C20",
+      "Distance_A": 3.6,
+      "Description": "Van der Waals / Alkyl Stacking"
+    }
+  ]
+}

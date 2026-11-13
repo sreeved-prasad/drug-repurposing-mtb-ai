@@ -1,0 +1,38 @@
+{
+  "Disease": "COVID-19",
+  "Pathogen": "Severe acute respiratory syndrome coronavirus 2",
+  "Target Protein": "3C-like proteinase (Mpro / Main Protease)",
+  "UniProt Accession": "P0DTD1",
+  "PDB Structure": "6LU7",
+  "Sequence Length": 306,
+  "ChEMBL Target ID": "CHEMBL4303835",
+  "Bioactivities Harvested": 100,
+  "Screening Architecture": "DualEncoderDTI (ESM-2 + PyG GNN 3D)",
+  "Top Candidates": [
+    {
+      "Drug Name": "Niclosamide",
+      "Repurposing Score": 0.912,
+      "Original Indication": "Anthelmintic (FDA Approved)"
+    },
+    {
+      "Drug Name": "Clofazimine",
+      "Repurposing Score": 0.843,
+      "Original Indication": "Leprosy / Off-label TB (FDA Approved)"
+    },
+    {
+      "Drug Name": "Metformin",
+      "Repurposing Score": 0.007,
+      "Original Indication": "Type 2 Diabetes (FDA Approved)"
+    },
+    {
+      "Drug Name": "Aspirin",
+      "Repurposing Score": 0.0067,
+      "Original Indication": "Anti-inflammatory / NSAID (FDA Approved)"
+    },
+    {
+      "Drug Name": "Linezolid",
+      "Repurposing Score": 0.0066,
+      "Original Indication": "Gram-positive / DR-TB (FDA Approved)"
+    }
+  ]
+}

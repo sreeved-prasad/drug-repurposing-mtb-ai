@@ -1,0 +1,11 @@
+Rank,Drug Name,Disease Target,Pathogen,Repurposing Score,Original Indication,SMILES
+1,Niclosamide,3C-like proteinase (Mpro / Main Protease) (P0DTD1),Severe acute respiratory syndrome coronavirus 2,0.912,Anthelmintic (FDA Approved),C1=CC(=C(C=C1Cl)NC(=O)C2=C(C=CC(=C2)[N+](=O)[O-])O)Cl
+2,Clofazimine,3C-like proteinase (Mpro / Main Protease) (P0DTD1),Severe acute respiratory syndrome coronavirus 2,0.843,Leprosy / Off-label TB (FDA Approved),CC(C)NC1=NC2=CC=CC=C2N(C3=CC=C(C=C3)Cl)C1=NC4=CC=C(C=C4)Cl
+3,Metformin,3C-like proteinase (Mpro / Main Protease) (P0DTD1),Severe acute respiratory syndrome coronavirus 2,0.007,Type 2 Diabetes (FDA Approved),CN(C)C(=N)NC(=N)N
+4,Aspirin,3C-like proteinase (Mpro / Main Protease) (P0DTD1),Severe acute respiratory syndrome coronavirus 2,0.0067,Anti-inflammatory / NSAID (FDA Approved),CC(=O)OC1=CC=CC=C1C(=O)O
+5,Linezolid,3C-like proteinase (Mpro / Main Protease) (P0DTD1),Severe acute respiratory syndrome coronavirus 2,0.0066,Gram-positive / DR-TB (FDA Approved),CC(=O)NCC1CN(C2=CC(=C(C=C2)N3CCOCC3)F)C(=O)O1
+6,Ciprofloxacin,3C-like proteinase (Mpro / Main Protease) (P0DTD1),Severe acute respiratory syndrome coronavirus 2,0.0065,Broad-spectrum Fluoroquinolone (FDA Approved),C1CC1N2C=C(C(=O)C3=CC(=C(C=C32)N4CCNCC4)F)C(=O)O
+7,Chloroquine,3C-like proteinase (Mpro / Main Protease) (P0DTD1),Severe acute respiratory syndrome coronavirus 2,0.0064,Malaria / Amoebiasis (FDA Approved),CCN(CC)CCCC(C)NC1=C2C=CC(Cl)=CC2=NC=C1
+8,Disulfiram,3C-like proteinase (Mpro / Main Protease) (P0DTD1),Severe acute respiratory syndrome coronavirus 2,0.0063,Alcohol Dependence (FDA Approved),CCN(CC)C(=S)SSC(=S)N(CC)CC
+9,Atorvastatin,3C-like proteinase (Mpro / Main Protease) (P0DTD1),Severe acute respiratory syndrome coronavirus 2,0.0062,Dyslipidemia (FDA Approved),CC(C)C1=C(C(=C(N1CCC(CC(CC(=O)O)O)O)C2=CC=C(C=C2)F)C3=CC=CC=C3)C(=O)NC4=CC=CC=C4
+10,Auranofin,3C-like proteinase (Mpro / Main Protease) (P0DTD1),Severe acute respiratory syndrome coronavirus 2,0.0058,Rheumatoid Arthritis (FDA Approved),CC(=O)OCC1C(C(C(C(O1)S[Au]P(CC)(CC)CC)OC(=O)C)OC(=O)C)OC(=O)C

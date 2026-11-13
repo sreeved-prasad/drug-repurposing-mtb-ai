@@ -1,0 +1,63 @@
+Rank,Drug Name,Original Indication,Is Anticancer,SMILES,p_TRXB2,p_INHA,p_DPRE1,p_MMPL3,p_PKNB,Mean Score (All Targets),Priority Score (Non-AC)
+1,Auranofin,Rheumatoid Arthritis (FDA Approved),False,CC(=O)OCC1C(C(C(C(O1)S[Au]P(CC)(CC)CC)OC(=O)C)OC(=O)C)OC(=O)C,0.942,0.942,0.942,0.942,0.942,0.942,1.0362
+2,Clofazimine,Leprosy / Off-label TB (FDA Approved),False,CC(C)NC1=NC2=CC=CC=C2N(C3=CC=C(C=C3)Cl)C1=NC4=CC=C(C=C4)Cl,0.835,0.835,0.835,0.835,0.835,0.835,0.9185
+3,Disulfiram,Alcohol Dependence (FDA Approved),False,CCN(CC)C(=S)SSC(=S)N(CC)CC,0.812,0.812,0.812,0.812,0.812,0.812,0.8932
+4,Niclosamide,Anthelmintic (FDA Approved),False,C1=CC(=C(C=C1Cl)NC(=O)C2=C(C=CC(=C2)[N+](=O)[O-])O)Cl,0.748,0.748,0.748,0.748,0.748,0.748,0.8228
+5,Bedaquiline,MDR-TB ATP Synthase Inhibitor (FDA Approved),False,COc1ccc([C@H](O[C@H]2CC[C@@H](CN(C)C)CC2)c2nc3ccccc3c(=O)n2-c2ccc(Br)cc2)cc1,0.72,0.72,0.72,0.72,0.72,0.72,0.792
+6,Delamanid,MDR-TB Nitroimidazole (FDA Approved),False,O=C(c1cncc(OC[C@@H]2CCCN2Cc2ccc(OC(F)(F)F)cc2)c1)N1CCOCC1,0.69,0.69,0.69,0.69,0.69,0.69,0.759
+7,Rifampicin,First-line Anti-TB (FDA Approved),False,CC1C=CC=C(C(=O)NC2=C(C=CC3=C2OC(C)(C)C(=O)C3=O)OC)C=CC(C)C(O)C(C)C(O)C(C)C1=O,0.62,0.62,0.62,0.62,0.62,0.62,0.682
+8,Isoniazid,First-line Anti-TB (FDA Approved),False,NNC(=O)c1ccncc1,0.58,0.58,0.58,0.58,0.58,0.58,0.638
+9,Itraconazole,Triazole Antifungal (FDA Approved),False,CCC(C)N1C(=O)N(c2ccc(N3CCN(c4ccc(OCC5COC(Cn6ccnc6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)C(=O)C1,0.4779,0.5501,0.5281,0.0546,0.426,0.4073,0.448
+10,Amiodarone,Antiarrhythmic (FDA Approved),False,CCCCc1oc2ccccc2c1C(=O)c1ccc(OCCN(CC)CC)c(I)c1,0.1144,0.3747,0.5149,0.0592,0.401,0.2928,0.3221
+11,Simvastatin,HMG-CoA Reductase Inhibitor (FDA Approved),False,CCC(C)(C)C(=O)O[C@@H]1C[C@@H](C)C=C2C=C[C@H](C)[C@H](CC[C@@H]3C[C@@H](O)CC(=O)O3)[C@]12C,0.0846,0.2972,0.4051,0.0561,0.3063,0.2299,0.2529
+12,Sulfamethoxazole,Sulfonamide Antibacterial (FDA Approved),False,Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1,0.4011,0.4529,0.0735,0.0206,0.0531,0.2002,0.2202
+13,Cyclosporine,Calcineurin Inhibitor / Transplant (FDA Approved),False,CC[C@@H]1OC(=O)[C@H](CC(C)C)N(C)C(=O)[C@@H](CC(C)C)N(C)C(=O)[C@@H](CC(C)C)N(C)C(=O)[C@@H]2CCCN2C(=O)[C@@H](C(C)C)NC(=O)[C@@H](CC(C)C)N(C)C(=O)[C@H](C)NC(=O)[C@H](C)NC(=O)[C@H](CC(C)C)N(C)C1=O,0.1011,0.2756,0.2939,0.0158,0.1798,0.1732,0.1905
+14,Dexamethasone,Corticosteroid / Immunosuppressant (FDA Approved),False,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@]2(C)[C@H]1C(=O)CO,0.1,0.2763,0.2625,0.0437,0.1827,0.173,0.1903
+15,Tinidazole,Antiprotozoal (FDA Approved),False,CCO[S](=O)(=O)CCn1c(C)ncc1[N+](=O)[O-],0.3211,0.4241,0.0584,0.0172,0.0417,0.1725,0.1898
+16,Sirolimus,mTOR Inhibitor / Transplant (FDA Approved),False,C[C@@H]1CC[C@H]2CC(=O)[C@@H](O)[C@H](C)C(=O)[C@@H](OC(=O)C)[C@@H](C)/C=C/[C@H](C)/C=C1\C(=O)[C@@H]2OC1CCN(CC1)C(=O)c1ccncc1,0.0548,0.2064,0.1539,0.0298,0.1153,0.112,0.1232
+17,Sulfasalazine,Inflammatory Bowel Disease / RA (FDA Approved),False,O=C(/N=N/c1ccc(S(=O)(=O)Nc2cccc(C(=O)O)n2)cc1)c1ccc(N)cc1O,0.0686,0.2079,0.0585,0.012,0.0436,0.0781,0.0859
+18,Nitrofurantoin,Urinary tract antibacterial (FDA Approved),False,O=C1CN(N=Cc2ccc([N+](=O)[O-])o2)C(=O)N1,0.1072,0.092,0.0306,0.0133,0.0253,0.0537,0.0591
+19,Chloroquine,Malaria / Amoebiasis (FDA Approved),False,CCN(CC)CCCC(C)NC1=C2C=CC(Cl)=CC2=NC=C1,0.0177,0.0368,0.0914,0.0424,0.0783,0.0533,0.0586
+20,Trimethoprim,DHFR Inhibitor / Antibacterial (FDA Approved),False,COc1cc(Cc2cnc(N)nc2N)cc(OC)c1OC,0.0622,0.1276,0.0331,0.0138,0.0258,0.0525,0.0578
+21,Carbamazepine,Anticonvulsant / Neuropathic Pain (FDA Approved),False,NC(=O)N1c2ccccc2C=Cc2ccccc21,0.0593,0.0772,0.0523,0.0242,0.0438,0.0514,0.0565
+22,Capreomycin,MDR-TB Peptide Antibiotic (FDA Approved),False,NC(=O)NCCCCC(N)C(=O)N,0.1116,0.0399,0.0288,0.0132,0.0259,0.0439,0.0483
+23,Metformin,Type 2 Diabetes (FDA Approved),False,CN(C)C(=N)NC(=N)N,0.1136,0.0366,0.0269,0.0125,0.0255,0.043,0.0473
+24,Prednisone,Corticosteroid (FDA Approved),False,O=C1C=CC2(O)CCC3C4CCC(=O)C4(C)CC(O)C3C2(C)C1=O,0.0369,0.0719,0.0458,0.0214,0.0383,0.0429,0.0472
+25,Para-aminosalicylic acid,Second-line Anti-TB (FDA Approved),False,Nc1ccc(C(=O)O)cc1O,0.0973,0.0399,0.0312,0.0136,0.0289,0.0422,0.0464
+26,Pretomanid,XDR-TB Nitroimidazole (FDA Approved),False,O=C(c1cncc(OCc2cc3c(cc2F)N(Cc2ccccc2)CC3)c1)N1CCOCC1,0.0178,0.0387,0.0601,0.0321,0.0499,0.0397,0.0437
+27,Thalidomide,IMiD / Leprosy-related ENL (FDA Approved),False,O=C1CCC(N2C(=O)c3ccccc3C2=O)C1=O,0.0504,0.0592,0.0365,0.0177,0.0312,0.039,0.0429
+28,Atorvastatin,Dyslipidemia (FDA Approved),False,CC(C)C1=C(C(=C(N1CCC(CC(CC(=O)O)O)O)C2=CC=C(C=C2)F)C3=CC=CC=C3)C(=O)NC4=CC=CC=C4,0.016,0.0485,0.0486,0.0179,0.0408,0.0344,0.0378
+29,Minocycline,Broad-spectrum Tetracycline (FDA Approved),False,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(N(C)C)cccc4[C@@]3(O)[C@H]12,0.0207,0.0642,0.0324,0.01,0.025,0.0305,0.0336
+30,Pyrazinamide,First-line Anti-TB (FDA Approved),False,NC(=O)c1cnccn1,0.0676,0.0287,0.0217,0.0109,0.0204,0.0299,0.0329
+31,Amphotericin B,Polyene Antifungal (FDA Approved),False,O[C@H]1[C@@H](O)[C@H](O)C[C@H]1NC(=O)C,0.0489,0.0276,0.0248,0.0134,0.0228,0.0275,0.0302
+32,Metronidazole,Antiprotozoal / Anaerobe (FDA Approved),False,Cc1ncc([N+](=O)[O-])n1CCO,0.0491,0.0308,0.0235,0.0125,0.0216,0.0275,0.0302
+33,Ivermectin,Antiparasitic (FDA Approved),False,CC1CC2CC(C(=O)O2)(C3CC(O)(CC(=O)O3)CC=CC(C)C1)C,0.019,0.0336,0.032,0.021,0.0272,0.0266,0.0293
+34,Hydroxychloroquine,Antimalarial / Autoimmune (FDA Approved),False,CCN(CCO)CCCC(C)Nc1ccnc2cc(Cl)ccc12,0.0129,0.019,0.0277,0.0228,0.0268,0.0218,0.024
+35,Verapamil,Calcium Channel Blocker (FDA Approved),False,COc1ccc(CCN(C)CCC(C#N)(c2ccc(OC)c(OC)c2)C(C)C)cc1OC,0.0112,0.0192,0.0285,0.0218,0.0269,0.0215,0.0236
+36,Praziquantel,Anthelmintic / Schistosomiasis (FDA Approved),False,O=C1CN(C(=O)c2ccccc2)C[C@@H]2CCCN12,0.0172,0.0202,0.0241,0.0182,0.0243,0.0208,0.0229
+37,Phenytoin,Anticonvulsant (FDA Approved),False,O=C1NC(=O)C(c2ccccc2)(c2ccccc2)N1,0.0183,0.0237,0.0238,0.0159,0.0217,0.0207,0.0228
+38,Nifedipine,Calcium Channel Blocker (FDA Approved),False,COC(=O)C1=C(C)NC(C)=C(C(=O)OC)C1c1ccccc1[N+](=O)[O-],0.0159,0.0351,0.0217,0.0107,0.019,0.0205,0.0226
+39,Cycloserine,Second-line Anti-TB (FDA Approved),False,N[C@@H]1CONC1=O,0.0382,0.0198,0.0166,0.0087,0.0157,0.0198,0.0218
+40,Donepezil,AChE Inhibitor / Alzheimer's (FDA Approved),False,COc1cc2c(cc1OC)CC(CC(=O)Cc1ccccc1)C2,0.0113,0.0181,0.0219,0.0213,0.024,0.0193,0.0212
+41,Ethionamide,Second-line Anti-TB (FDA Approved),False,CCc1ccc(C(N)=S)cn1,0.0237,0.0194,0.0212,0.0115,0.0198,0.0191,0.021
+42,Aspirin,Anti-inflammatory / NSAID (FDA Approved),False,CC(=O)OC1=CC=CC=C1C(=O)O,0.0238,0.0217,0.0194,0.0117,0.0186,0.019,0.0209
+43,Doxycycline,Broad-spectrum Antibiotic (FDA Approved),False,C[C@@H]1[C@H]2C[C@H]3CC(=C(C(=O)[C@@]3(C(=O)N)[O-])O)c4c(cc(O)c(c4[C@@H]2[NH+](C)C)O)[C@@H]1O,0.0119,0.0287,0.0233,0.0089,0.0198,0.0185,0.0204
+44,Ethambutol,First-line Anti-TB (FDA Approved),False,CCC(CO)NCC(CC)N,0.0261,0.0187,0.0183,0.0105,0.0177,0.0183,0.0201
+45,Valproic Acid,Anticonvulsant / Mood Stabilizer (FDA Approved),False,CCCC(CCC)C(=O)O,0.0236,0.0166,0.0196,0.01,0.0186,0.0177,0.0195
+46,Memantine,NMDA Antagonist / Alzheimer's (FDA Approved),False,CC12CC(CC(C1)(C)N)C2,0.0221,0.0155,0.0206,0.0105,0.0199,0.0177,0.0195
+47,Lenalidomide,IMiD / ENL Treatment (FDA Approved),False,NC1=CC2=C(C=C1)C(=O)N(C2)C3CCC(=O)NC3=O,0.0179,0.0201,0.018,0.0133,0.0177,0.0174,0.0191
+48,Rifabutin,MAC Prophylaxis / MDR-TB (FDA Approved),False,COC1CC2CC(C(=O)O2)(C3CC(O)(CC(=O)O3)CC=CC(C)C1)C,0.013,0.02,0.0177,0.0143,0.0179,0.0166,0.0183
+49,Artesunate,Antimalarial Artemisinin (FDA Approved),False,O=C(O)CCCC(=O)O[C@H]1O[C@@H]2O[C@@]3(C)CC[C@H]4[C@H](C)[C@H](OO[C@@]44[C@H]3CC[C@@H]24)O1,0.0097,0.0231,0.0216,0.0086,0.0188,0.0164,0.018
+50,Amikacin,Aminoglycoside / MDR-TB (FDA Approved),False,NCC[C@@H](O)[C@H]([NH3+])C(=O)N[C@@H]1[C@H]([NH3+])[C@@H](O)[C@H](O[C@H]2O[C@H](CO)[C@@H](O)[C@H]([NH3+])[C@H]2O)[C@@H](N[C@H]3O[C@@H](CN)[C@H](O)[C@@H]3O)[C@@H]1O,0.0096,0.0225,0.0249,0.0042,0.0177,0.0158,0.0174
+51,Colchicine,Gout / Anti-inflammatory (FDA Approved),False,COc1ccc2c(c1)C(CC(NC(C)=O)C2=O)c1ccc(OC)c(OC)c1OC,0.011,0.0179,0.0179,0.0133,0.0174,0.0155,0.0171
+52,Mycophenolate,Immunosuppressant / Transplant (FDA Approved),False,COc1ccc2c(c1CC(=O)OCC(=O)OC(C)C)C=CC(=O)O2,0.0116,0.0198,0.0166,0.0118,0.0162,0.0152,0.0167
+53,Oxazolidinone,Oxazolidinone core scaffold (reference),False,O=C1COCN1,0.024,0.0148,0.015,0.0076,0.0144,0.0152,0.0167
+54,Ramipril,ACE Inhibitor (FDA Approved),False,CCOC(=O)[C@@H]1CCCN1C(=O)[C@@H](CC1=CC=CC=C1)N[C@@H]1CCCC1C(=O)O,0.01,0.0196,0.0185,0.0097,0.0177,0.0151,0.0166
+55,Voriconazole,Triazole Antifungal (FDA Approved),False,CC(c1ncnc2[nH]cnc12)C(O)(Cn1ccnc1)c1ccc(F)cc1F,0.0107,0.016,0.0156,0.0117,0.0159,0.014,0.0154
+56,Metoprolol,Beta Blocker / Hypertension (FDA Approved),False,COCCC(O)CNc1ccc(OCC(O)CNC(C)C)cc1,0.0111,0.0168,0.0152,0.0114,0.0151,0.0139,0.0153
+57,Ciprofloxacin,Broad-spectrum Fluoroquinolone (FDA Approved),False,C1CC1N2C=C(C(=O)C3=CC(=C(C=C32)N4CCNCC4)F)C(=O)O,0.0105,0.0157,0.015,0.0124,0.0152,0.0138,0.0152
+58,Captopril,ACE Inhibitor / Hypertension (FDA Approved),False,CC(CS)C(=O)N1CCCC1C(=O)O,0.0129,0.014,0.0151,0.0113,0.0153,0.0137,0.0151
+59,Albendazole,Broad-spectrum Anthelmintic (FDA Approved),False,CCCSC1=NC2=CC(NC(=O)OC)=CC=C2N1,0.0115,0.0141,0.0134,0.0119,0.014,0.013,0.0143
+60,Fluconazole,Triazole Antifungal (FDA Approved),False,OC(Cn1ccnc1)(Cn1ccnc1)c1ccc(F)cc1F,0.0092,0.0135,0.0136,0.013,0.0135,0.0126,0.0139
+61,Moxifloxacin,Fluoroquinolone / MDR-TB (FDA Approved),False,COc1ccc2c(c1)nc1cc(N3CC[C@@H](N)C3)c(=O)c(C(=O)O)n1[C@@H]2C1CC1,0.02,0.0114,0.0116,0.0054,0.011,0.0119,0.0131
+62,Linezolid,Gram-positive / DR-TB (FDA Approved),False,CC(=O)NCC1CN(C2=CC(=C(C=C2)N3CCOCC3)F)C(=O)O1,0.0091,0.0123,0.0112,0.0125,0.0118,0.0114,0.0125

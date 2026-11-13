@@ -1,0 +1,10 @@
+Target Gene,Target Name,UniProt,Measurement Type,Total Records,pActivity Mean,pActivity Median,pActivity Std,pActivity Min,pActivity Max,Nanomolar Hits (pAct≥7.0),Potent Hits (pAct≥6.0),Active Hits (pAct≥5.0),Unique Scaffolds
+can,Beta-Carbonic Anhydrase 1,P9WPJ7,Ki,124,6.069,6.06,1.11,4.19,8.49,26,66,107,41
+ftsZ,Cell Division Protein FtsZ,P9WN95,IC50,18,4.556,4.47,0.265,4.26,5.21,0,0,2,8
+gyrA,DNA Gyrase Subunit A,P9WG47,IC50,4,4.972,5.035,0.519,4.28,5.54,0,0,3,4
+inhA,Enoyl-ACP Reductase,P9WGR1,IC50,342,5.88,5.51,1.206,3.4,8.7,69,136,252,145
+inhA,Enoyl-ACP Reductase,P9WGR1,Ki,54,8.136,9.0,1.428,4.15,10.66,40,48,53,25
+ndh,NADH:Quinone Oxidoreductase Ndh,P95160,IC50,6,7.343,7.525,0.618,6.47,7.92,4,6,6,2
+pknB,Ser/Thr Protein Kinase PknB,P9WI81,IC50,54,6.323,6.415,0.78,4.7,7.64,15,32,53,28
+pknB,Ser/Thr Protein Kinase PknB,P9WI81,Ki,64,6.36,6.345,1.05,4.58,8.4,21,38,58,19
+trxB2,Thioredoxin Reductase,P9WHH1,IC50,9,4.449,4.52,0.444,3.699,4.9,0,0,0,9

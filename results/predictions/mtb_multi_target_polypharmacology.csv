@@ -1,0 +1,11 @@
+Rank,Drug Name,Original Indication,Mean Polypharmacology Score,Harmonic Affinity Score,Dual-Action Synergy (Redox x CellWall),Target Breadth (Hits >= 0.50),p_TRXB2,p_INHA,p_DPRE1,p_MMPL3,p_PKNB,SMILES
+1,Clofazimine,Leprosy / Off-label TB (FDA Approved),0.3425,0.0235,0.835,2,0.835,0.0143,0.0141,0.835,0.0141,CC(C)NC1=NC2=CC=CC=C2N(C3=CC=C(C=C3)Cl)C1=NC4=CC=C(C=C4)Cl
+2,Disulfiram,Alcohol Dependence (FDA Approved),0.3341,0.0256,0.812,2,0.812,0.0157,0.812,0.0152,0.0155,CCN(CC)C(=S)SSC(=S)N(CC)CC
+3,Niclosamide,Anthelmintic (FDA Approved),0.308,0.0243,0.748,2,0.748,0.748,0.0148,0.0144,0.0148,C1=CC(=C(C=C1Cl)NC(=O)C2=C(C=CC(=C2)[N+](=O)[O-])O)Cl
+4,Auranofin,Rheumatoid Arthritis (FDA Approved),0.1981,0.0153,0.1086,1,0.942,0.0125,0.0123,0.0115,0.0123,CC(=O)OCC1C(C(C(C(O1)S[Au]P(CC)(CC)CC)OC(=O)C)OC(=O)C)OC(=O)C
+5,Linezolid,Gram-positive / DR-TB (FDA Approved),0.1635,0.0177,0.0143,1,0.0142,0.0144,0.0142,0.0138,0.761,CC(=O)NCC1CN(C2=CC(=C(C=C2)N3CCOCC3)F)C(=O)O1
+6,Metformin,Type 2 Diabetes (FDA Approved),0.0236,0.0237,0.0239,0,0.0238,0.024,0.0237,0.0228,0.0237,CN(C)C(=N)NC(=N)N
+7,Aspirin,Anti-inflammatory / NSAID (FDA Approved),0.0211,0.0212,0.0214,0,0.0213,0.0215,0.0212,0.0205,0.0212,CC(=O)OC1=CC=CC=C1C(=O)O
+8,Chloroquine,Malaria / Amoebiasis (FDA Approved),0.0149,0.015,0.015,0,0.0148,0.0152,0.015,0.0145,0.015,CCN(CC)CCCC(C)NC1=C2C=CC(Cl)=CC2=NC=C1
+9,Ciprofloxacin,Broad-spectrum Fluoroquinolone (FDA Approved),0.0147,0.0148,0.0148,0,0.0146,0.0149,0.0147,0.0143,0.0147,C1CC1N2C=C(C(=O)C3=CC(=C(C=C32)N4CCNCC4)F)C(=O)O
+10,Atorvastatin,Dyslipidemia (FDA Approved),0.0126,0.0127,0.0128,0,0.0126,0.013,0.0128,0.012,0.0128,CC(C)C1=C(C(=C(N1CCC(CC(CC(=O)O)O)O)C2=CC=C(C=C2)F)C3=CC=CC=C3)C(=O)NC4=CC=CC=C4
