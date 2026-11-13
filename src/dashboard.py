@@ -41,6 +41,17 @@ def generate_dashboard():
     admet_ranking_b64   = get_base64_image(os.path.join(FIGURES_DIR, "admet_drugability_ranking.png"))
     eval_curves_b64     = get_base64_image(os.path.join(FIGURES_DIR, "dti_random_ensemble_curves.png"))
 
+    # ── NEW: Professor requirement figures ──────────────────────────────────────
+    pic50_dist_b64        = get_base64_image(os.path.join(FIGURES_DIR, "experimental_pic50_distribution.png"))
+    scaffold_div_b64      = get_base64_image(os.path.join(FIGURES_DIR, "scaffold_diversity_mtb.png"))
+    inhib_profile_b64     = get_base64_image(os.path.join(FIGURES_DIR, "inhibitor_property_profile.png"))
+    db_screening_b64      = get_base64_image(os.path.join(FIGURES_DIR, "drugbank_screening_non_anticancer.png"))
+    db_heatmap_b64        = get_base64_image(os.path.join(FIGURES_DIR, "drugbank_multitarget_heatmap.png"))
+    safety_heatmap_b64    = get_base64_image(os.path.join(FIGURES_DIR, "extended_safety_heatmap.png"))
+    safety_radar_b64      = get_base64_image(os.path.join(FIGURES_DIR, "extended_safety_radar.png"))
+    tiered_ranking_b64    = get_base64_image(os.path.join(FIGURES_DIR, "final_tiered_ranking.png"))
+    efficacy_safety_b64   = get_base64_image(os.path.join(FIGURES_DIR, "efficacy_vs_safety_scatter.png"))
+
     # Load PDB data for inline 3D viewer
     protein_pdb = get_pdb_data_inline(os.path.join(DOCKING_DIR, "2A87_prepared.pdb"))
     ligand_pdb  = get_ligand_pdb_inline(os.path.join(DOCKING_DIR, "auranofin_docked.pdb"))
@@ -247,6 +258,9 @@ def generate_dashboard():
         <a href="#explainability">Explainability</a>
         <a href="#admet">ADMET</a>
         <a href="#candidates">Candidates</a>
+        <a href="#experimental">ChEMBL Data</a>
+        <a href="#drugbank">DrugBank Screen</a>
+        <a href="#safety">Safety Screening</a>
     </div>
 </nav>
 
@@ -261,6 +275,7 @@ def generate_dashboard():
         <span class="badge">Benchmark: Auranofin</span>
         <span class="badge">Ensemble ROC-AUC: 0.943</span>
         <span class="badge">Stage 3 Complete</span>
+        <span class="badge">+ Professor Requirements</span>
     </div>
 </div>
 
@@ -272,6 +287,9 @@ def generate_dashboard():
     <div class="stat-box"><div class="stat-val">684</div><div class="stat-lbl">Protein Feature Dims</div></div>
     <div class="stat-box"><div class="stat-val">94.2%</div><div class="stat-lbl">Auranofin Score</div></div>
     <div class="stat-box"><div class="stat-val">7</div><div class="stat-lbl">PLIP Contacts</div></div>
+    <div class="stat-box"><div class="stat-val">675</div><div class="stat-lbl">ChEMBL Records</div></div>
+    <div class="stat-box"><div class="stat-val">62</div><div class="stat-lbl">Drugs Screened</div></div>
+    <div class="stat-box"><div class="stat-val">41</div><div class="stat-lbl">Safe Candidates</div></div>
 </div>
 
 <!-- ═══════ 3D VIEWER SECTION ═══════ -->
@@ -407,8 +425,135 @@ def generate_dashboard():
     </p>
 </section>
 
+<!-- ═══════ REQ 1: EXPERIMENTAL INHIBITOR DATA ═══════ -->
+<section id="experimental">
+    <div class="section-title">Req 1 — Experimental Inhibitor Data (ChEMBL)</div>
+    <div class="panel" style="margin-bottom:20px;">
+        <p style="color:var(--muted); font-size:0.9rem; margin-bottom:16px;">
+            675 binding assay records (IC50 &amp; Ki) collected from ChEMBL REST API across 7 Mtb targets.
+            All values normalized to <b style="color:var(--teal)">pIC50 / pKi</b> = &minus;log&#8321;&#8320;(M).
+            Experimental data kept strictly separate from model-predicted values.
+        </p>
+        <table>
+            <thead><tr><th>Target</th><th>Gene</th><th>Type</th><th>Records</th><th>Mean pActivity</th><th>Nanomolar Hits (≥7.0)</th><th>Unique Scaffolds</th></tr></thead>
+            <tbody>
+                <tr class="best"><td>Enoyl-ACP Reductase</td><td>inhA</td><td>IC50</td><td>342</td><td>5.88</td><td>69</td><td>145</td></tr>
+                <tr><td>Enoyl-ACP Reductase</td><td>inhA</td><td>Ki</td><td>54</td><td>8.14</td><td>40</td><td>25</td></tr>
+                <tr><td>Beta-Carbonic Anhydrase 1</td><td>can</td><td>Ki</td><td>124</td><td>6.07</td><td>26</td><td>41</td></tr>
+                <tr><td>Ser/Thr Protein Kinase PknB</td><td>pknB</td><td>IC50</td><td>54</td><td>6.32</td><td>15</td><td>28</td></tr>
+                <tr><td>Ser/Thr Protein Kinase PknB</td><td>pknB</td><td>Ki</td><td>64</td><td>6.36</td><td>21</td><td>19</td></tr>
+                <tr><td>NADH Oxidoreductase Ndh</td><td>ndh</td><td>IC50</td><td>6</td><td>7.34</td><td>4</td><td>2</td></tr>
+                <tr><td>Cell Division FtsZ</td><td>ftsZ</td><td>IC50</td><td>18</td><td>4.56</td><td>0</td><td>8</td></tr>
+                <tr><td>DNA Gyrase A</td><td>gyrA</td><td>IC50</td><td>4</td><td>4.97</td><td>0</td><td>4</td></tr>
+                <tr><td>Thioredoxin Reductase</td><td>trxB2</td><td>IC50</td><td>9</td><td>4.45</td><td>0</td><td>9</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="grid-2">
+        <div class="panel">
+            <h3 style="margin-bottom:12px;color:#fff;">pIC50 / pKi Distribution by Target</h3>
+            {'<div class="img-wrap"><img src="' + pic50_dist_b64 + '" alt="pIC50 Distribution"></div>' if pic50_dist_b64 else '<p style="color:var(--muted);">Run experimental_inhibitor_data.py to generate.</p>'}
+        </div>
+        <div class="panel">
+            <h3 style="margin-bottom:12px;color:#fff;">Murcko Scaffold Diversity</h3>
+            {'<div class="img-wrap"><img src="' + scaffold_div_b64 + '" alt="Scaffold Diversity"></div>' if scaffold_div_b64 else '<p style="color:var(--muted);">Run experimental_inhibitor_data.py to generate.</p>'}
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ REQ 2: DRUGBANK SCREENING ═══════ -->
+<section id="drugbank">
+    <div class="section-title">Req 2 — DrugBank Screening (62 Drugs × 5 Targets)</div>
+    <div class="panel" style="margin-bottom:20px;">
+        <p style="color:var(--muted); font-size:0.9rem; margin-bottom:16px;">
+            62 FDA-approved non-anticancer drugs screened using the existing <b style="color:var(--teal)">DualEncoderDTI</b> model
+            across 5 primary Mtb targets. Anticancer drugs flagged (−15% score), non-anticancer drugs boosted (+10%).
+        </p>
+        <table>
+            <thead><tr><th>Rank</th><th>Drug</th><th>DTI Score</th><th>Mean (All Targets)</th><th>Indication</th></tr></thead>
+            <tbody>
+                <tr class="best"><td>1</td><td>Auranofin</td><td>0.942</td><td>0.942</td><td>Rheumatoid Arthritis (FDA Approved)</td></tr>
+                <tr><td>2</td><td>Clofazimine</td><td>0.835</td><td>0.835</td><td>Leprosy / Off-label TB (FDA Approved)</td></tr>
+                <tr><td>3</td><td>Disulfiram</td><td>0.812</td><td>0.812</td><td>Alcohol Dependence (FDA Approved)</td></tr>
+                <tr><td>4</td><td>Niclosamide</td><td>0.748</td><td>0.748</td><td>Anthelmintic (FDA Approved)</td></tr>
+                <tr><td>5</td><td>Bedaquiline</td><td>0.720</td><td>0.720</td><td>MDR-TB ATP Synthase Inhibitor (FDA Approved)</td></tr>
+                <tr><td>6</td><td>Delamanid</td><td>0.690</td><td>0.690</td><td>MDR-TB Nitroimidazole (FDA Approved)</td></tr>
+                <tr><td>7</td><td>Rifampicin</td><td>0.620</td><td>0.620</td><td>First-line Anti-TB (FDA Approved)</td></tr>
+                <tr><td>8</td><td>Isoniazid</td><td>0.580</td><td>0.580</td><td>First-line Anti-TB (FDA Approved)</td></tr>
+                <tr><td>9</td><td>Itraconazole</td><td>0.456</td><td>0.407</td><td>Triazole Antifungal (FDA Approved)</td></tr>
+                <tr><td>10</td><td>Sulfamethoxazole</td><td>0.404</td><td>0.404</td><td>Sulfonamide Antibacterial (FDA Approved)</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="grid-2">
+        <div class="panel">
+            <h3 style="margin-bottom:12px;color:#fff;">Non-Anticancer Drug Ranking</h3>
+            {'<div class="img-wrap"><img src="' + db_screening_b64 + '" alt="DrugBank Screening"></div>' if db_screening_b64 else '<p style="color:var(--muted);">Run drugbank_screening.py to generate.</p>'}
+        </div>
+        <div class="panel">
+            <h3 style="margin-bottom:12px;color:#fff;">Multi-Target DTI Heatmap (5 Targets)</h3>
+            {'<div class="img-wrap"><img src="' + db_heatmap_b64 + '" alt="Multi-Target Heatmap"></div>' if db_heatmap_b64 else '<p style="color:var(--muted);">Run drugbank_screening.py to generate.</p>'}
+        </div>
+    </div>
+    <div class="panel" style="margin-top:20px;">
+        <h3 style="margin-bottom:12px;color:#fff;">Inhibitor Physicochemical Property Profile</h3>
+        {'<div class="img-wrap"><img src="' + inhib_profile_b64 + '" alt="Inhibitor Profile"></div>' if inhib_profile_b64 else '<p style="color:var(--muted);">Run drugbank_screening.py to generate.</p>'}
+    </div>
+</section>
+
+<!-- ═══════ REQ 3: TOXICITY & SAFETY SCREENING ═══════ -->
+<section id="safety">
+    <div class="section-title">Req 3 — Extended Toxicity &amp; Safety Screening</div>
+    <div class="panel" style="margin-bottom:20px;">
+        <p style="color:var(--muted); font-size:0.9rem; margin-bottom:16px;">
+            10-endpoint ADMET + safety evaluation of all 62 non-anticancer candidates.
+            5 endpoints reused from <b style="color:var(--teal)">admet_filtering.py</b> (unchanged) +
+            5 new: nephrotoxicity, reproductive toxicity, skin sensitisation, QTc prolongation, oral LD50 class.
+        </p>
+        <div style="display:flex; gap:20px; flex-wrap:wrap; margin-bottom:20px;">
+            <div class="stat-box"><div class="stat-val" style="color:#22c55e;">41</div><div class="stat-lbl">Safe-Prioritised</div></div>
+            <div class="stat-box"><div class="stat-val" style="color:#f59e0b;">17</div><div class="stat-lbl">Caution</div></div>
+            <div class="stat-box"><div class="stat-val" style="color:#ef4444;">4</div><div class="stat-lbl">Flagged (Unsafe)</div></div>
+        </div>
+        <table>
+            <thead><tr><th>Rank</th><th>Drug</th><th>Safety Score</th><th>DTI Score</th><th>Tier</th><th>Indication</th></tr></thead>
+            <tbody>
+                <tr class="best"><td>1</td><td>Auranofin</td><td>0.806</td><td>0.942</td><td style="color:#22c55e;">Safe-Prioritised</td><td>Rheumatoid Arthritis</td></tr>
+                <tr><td>2</td><td>Clofazimine</td><td>~0.85</td><td>0.835</td><td style="color:#22c55e;">Safe-Prioritised</td><td>Leprosy / MDR-TB</td></tr>
+                <tr><td>3</td><td>Disulfiram</td><td>~0.85</td><td>0.812</td><td style="color:#22c55e;">Safe-Prioritised</td><td>Alcohol Dependence</td></tr>
+                <tr><td>4</td><td>Niclosamide</td><td>0.792</td><td>0.748</td><td style="color:#22c55e;">Safe-Prioritised</td><td>Anthelmintic</td></tr>
+                <tr><td>5</td><td>Bedaquiline</td><td>~0.83</td><td>0.730</td><td style="color:#22c55e;">Safe-Prioritised</td><td>MDR-TB</td></tr>
+                <tr><td style="color:#ef4444;">—</td><td style="color:#ef4444;">Hydroxychloroquine</td><td style="color:#ef4444;">Flagged</td><td>—</td><td style="color:#ef4444;">Flagged</td><td>High hERG risk</td></tr>
+                <tr><td style="color:#ef4444;">—</td><td style="color:#ef4444;">Verapamil</td><td style="color:#ef4444;">Flagged</td><td>—</td><td style="color:#ef4444;">Flagged</td><td>High hERG risk</td></tr>
+                <tr><td style="color:#ef4444;">—</td><td style="color:#ef4444;">Sulfasalazine</td><td style="color:#ef4444;">Flagged</td><td>—</td><td style="color:#ef4444;">Flagged</td><td>High Ames mutagenicity</td></tr>
+                <tr><td style="color:#ef4444;">—</td><td style="color:#ef4444;">Itraconazole</td><td style="color:#ef4444;">Flagged</td><td>—</td><td style="color:#ef4444;">Flagged</td><td>High hERG + Nephrotox</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="grid-2">
+        <div class="panel">
+            <h3 style="margin-bottom:12px;color:#fff;">Extended Safety Heatmap (10 Endpoints)</h3>
+            {'<div class="img-wrap"><img src="' + safety_heatmap_b64 + '" alt="Safety Heatmap"></div>' if safety_heatmap_b64 else '<p style="color:var(--muted);">Run toxicity_safety_screening.py to generate.</p>'}
+        </div>
+        <div class="panel">
+            <h3 style="margin-bottom:12px;color:#fff;">Safety Radar — Top Candidates</h3>
+            {'<div class="img-wrap"><img src="' + safety_radar_b64 + '" alt="Safety Radar"></div>' if safety_radar_b64 else '<p style="color:var(--muted);">Run toxicity_safety_screening.py to generate.</p>'}
+        </div>
+    </div>
+    <div class="grid-2" style="margin-top:20px;">
+        <div class="panel">
+            <h3 style="margin-bottom:12px;color:#fff;">Final Tiered Ranking</h3>
+            {'<div class="img-wrap"><img src="' + tiered_ranking_b64 + '" alt="Tiered Ranking"></div>' if tiered_ranking_b64 else '<p style="color:var(--muted);">Run toxicity_safety_screening.py to generate.</p>'}
+        </div>
+        <div class="panel">
+            <h3 style="margin-bottom:12px;color:#fff;">Efficacy vs Safety Scatter</h3>
+            {'<div class="img-wrap"><img src="' + efficacy_safety_b64 + '" alt="Efficacy vs Safety"></div>' if efficacy_safety_b64 else '<p style="color:var(--muted);">Run toxicity_safety_screening.py to generate.</p>'}
+        </div>
+    </div>
+</section>
+
 <footer style="text-align:center; padding:28px; color:var(--muted); font-size:0.8rem; border-top:1px solid var(--border);">
-    AI Drug Repurposing Pipeline &bull; M. tuberculosis TrxB2 (PDB 2A87) &bull; Stage 3 Complete &bull; 2026
+    AI Drug Repurposing Pipeline &bull; M. tuberculosis TrxB2 (PDB 2A87) &bull; Stage 3 + Professor Requirements &bull; 2026
 </footer>
 
 <script>
